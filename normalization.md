@@ -47,22 +47,6 @@ $batch\_size*feature\_size*feature\_dim$
 
 
 用图片来展示三者的区别，也就是：
-![](https://pic3.zhimg.com/v2-6d33ebbc287090e4c4e7d15c01aadb6e_b.jpg)
+![](pics/BN.jpg)
 红框里面也就是BN进行标准化的对象。
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
