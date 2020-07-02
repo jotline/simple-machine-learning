@@ -68,3 +68,23 @@ $$runningmean_{i}=(1-m)\times runningmean_{i-1}+m\times mean_{i} $$
 $$runningvar_{i}=(1-m)\times runningvar_{i-1}+m\times var_{i}$$
 
 ## Layer Normalization
+Layer Normalization 看名字容易搞迷糊，其实要单看Layer这个词，确实不好理解。
+
+但是和BN比较一下，就会发现非常清晰。
+
+试想一个问题：
+>BN是对特征进行标准化，但是如果一个batch里面的样本的特征数不一致该怎么办呢？
+
+对于CNN，DNN之类的网络，我们的input维度必须是一致的。
+
+但是对于RNN，我们input的维度不必是一致的（当然也可以用padding和截断做成一致的）。但是，不同长度的序列只不过经过RNN的次数不同，RNN的输出维度是可以确定的，所以RNN的输入维度其实是可以不一样的。
+
+这时候用BN就不合适了。
+
+>那我们对样本进行标准化不就行了？对，这就是LN！
+
+![](pics/LN.jpg)
+
+上图红框就是LN的标准化对象，可以看到和BN相反。
+
+LN比BN要简单的多，不需要额外记录mean和var，因为每个样本都是根据自身特征进行的标准化。
