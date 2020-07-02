@@ -67,7 +67,7 @@ $batch\_size*feature\_size*feature\_dim$
 $$runningmean_{i}=(1-m)\times runningmean_{i-1}+m\times mean_{i} $$ 
 $$runningvar_{i}=(1-m)\times runningvar_{i-1}+m\times var_{i}$$
 
-## Layer Normalization
+# Layer Normalization
 Layer Normalization 看名字容易搞迷糊，其实要单看Layer这个词，确实不好理解。
 
 但是和BN比较一下，就会发现非常清晰。
@@ -89,7 +89,7 @@ Layer Normalization 看名字容易搞迷糊，其实要单看Layer这个词，�
 
 LN比BN要简单的多，不需要额外记录mean和var，因为每个样本都是根据自身特征进行的标准化。
 
-## Instance Normalization
+# Instance Normalization
 主要应用在CV领域(图片风格迁移)，通俗来说就是
 >每个样本的每个channel都标准化一次（图片每个channel都有很多数据）
 
@@ -98,7 +98,7 @@ LN比BN要简单的多，不需要额外记录mean和var，因为每个样本都
 看到上图就都明白了，IN比LN和BN计算标准化的次数要更多。
 >如果说BN是按行标准化，LN是按列标准化，IN是按网格标准化
 
-## Group Normalization
+# Group Normalization
 是对BN的一个改进，主要解决小batch的情况下，BN计算不准的问题。
 
 ![](pics/GN.jpg)
