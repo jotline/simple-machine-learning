@@ -47,7 +47,9 @@ $batch\_size*feature\_size*feature\_dim$
 
 
 用图片来展示三者的区别，也就是：
+
 ![](pics/BN.jpg)
+
 红框里面也就是BN进行标准化的对象。
 
 ## 训练和测试的差别
