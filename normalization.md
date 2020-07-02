@@ -64,7 +64,7 @@ $batch\_size*feature\_size*feature\_dim$
 
 所以一般会引入momentum参数(记做m)，不断衰减历史的均值和方差的影响
 
-$$runningmean_{i}=(1-m)\times runningmean_{i-1}+m\times mean_{i} \\ 
- runningvar_{i}=(1-m)\times runningvar_{i-1}+m\times var_{i}$$
+$$runningmean_{i}=(1-m)\times runningmean_{i-1}+m\times mean_{i} $$ 
+$$runningvar_{i}=(1-m)\times runningvar_{i-1}+m\times var_{i}$$
 
 ## Layer Normalization
