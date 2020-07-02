@@ -88,3 +88,23 @@ Layer Normalization 看名字容易搞迷糊，其实要单看Layer这个词，�
 上图红框就是LN的标准化对象，可以看到和BN相反。
 
 LN比BN要简单的多，不需要额外记录mean和var，因为每个样本都是根据自身特征进行的标准化。
+
+## Instance Normalization
+主要应用在CV领域(图片风格迁移)，通俗来说就是
+>每个样本的每个channel都标准化一次（图片每个channel都有很多数据）
+
+![](pics/IN.jpg)
+
+看到上图就都明白了，IN比LN和BN计算标准化的次数要更多。
+>如果说BN是按行标准化，LN是按列标准化，IN是按网格标准化
+
+## Group Normalization
+是对BN的一个改进，主要解决小batch的情况下，BN计算不准的问题。
+
+![](pics/GN.jpg)
+
+思路就是：
+>如果batch太小，那我们就多个channel一块进行标准化，数据不够，通道来凑。
+
+毫无疑问，使用该方法，我们需要制定多少个channel一块进行标准化。
+
