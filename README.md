@@ -5,3 +5,4 @@
 
 # 目录
 [ 深度学习中的标准化方法 ](normalization.md):BN，LN，IN，GN的比较和理解
+[ RNN和LSTM的详解 ](RNNs.md):RNN和LSTM的原理详解
